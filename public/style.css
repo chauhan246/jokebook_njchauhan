@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f4f4f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+
+header h1 {
+  color: #2a9d8f;
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+main {
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 20px;
+}
+
+section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#random-joke,
+#categories-section,
+#new-joke-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#categories-section h3,
+#new-joke-section h2 {
+  margin-top: 1rem;
+}
+
+select,
+input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 100%;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #2a9d8f;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #21867a;
+}
+
+#jokes-list p {
+  font-size: 1.1rem;
+  margin: 5px 0;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+#new-joke-status {
+  display: none;
+  color: green;
+  float: right;
+  font-size: 1rem;
+  border: 1px solid #2fe913;
+  padding: 5px;
+  box-sizing: border-box;
+}

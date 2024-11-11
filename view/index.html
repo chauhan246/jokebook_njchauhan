@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Name: Nehabahen Chauhan
+       Date: 11.10.2024
+       CSC 372-01
+
+  This full-stack application lets the user view jokes by category and create their own.
+  I have also added functionality to search by category from an external source (https://sv443.net/jokeapi/v2 -> https://v2.jokeapi.dev/). 
+  This project is a full-stack application with a Node/Express backend. 
+  It uses SQLite for storing the data. The overall project follows the MVC architecture pattern.
+  -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jokebooks</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Jokebook</h1>
+    <p>Fun and exciting jokes to make your day!</p>
+  </header>
+
+  <main>
+    <!-- Random Joke Display -->
+    <section id="random-joke">
+      <h2>Random Joke</h2>
+      <p id="random-joke-setup"></p>
+      <p id="random-joke-delivery"></p>
+    </section>
+
+    <!-- Category List and Search -->
+    <section id="categories-section">
+      <h2>Categories</h2>
+      <div>
+        <select id="category-selection">
+          <option value="">Select a category</option>
+        </select>
+        <button id="get-jokes-btn">Get Jokes</button>
+      </div>
+
+      <div>
+        <input type="text" id="search-category" placeholder="Enter category name (e.g. Misc, Programming, Dark)">
+        <button id="search-jokes-btn">Search</button>
+      </div>
+
+      <h3>JOKES:</h3>
+      <div id="jokes-list">
+      </div>
+    </section>
+
+    <!-- Add New Joke Form -->
+    <section id="new-joke-section">
+      <h2>Add a New Joke <span id="new-joke-status"></span></h2>
+      <form id="add-new-joke">
+        <select id="new-joke-category-selection" required>
+          <option value="">Select a category</option>
+        </select>
+
+        <br>
+        <br>
+        <label for="new-joke-setup">Setup:</label>
+        <input type="text" id="setup" name="setup" required>
+
+        <label for="new-joke-delivery">Delivery:</label>
+        <input type="text" id="delivery" name="delivery" required>
+
+        <button type="submit">Add Joke</button>
+      </form>
+    </section>
+  </main>
+
+</body>
+
+</html>
